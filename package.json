@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "array-flatten": "^3.0.0",
+    "merge-descriptors": "^2.0.0",
+    "methods": "^1.1.2",
+    "setprototypeof": "^1.2.0"
+  },
+  "name": "express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
