@@ -65,7 +65,21 @@ proto.handle = function handle(req, res, out) {
 
       route.stack[0].handle_request(req, res, next);
     }
+
+    //if match but no route - well call `handle_request`
+    if (match) {
+      layer.handle_request(req, res, next);
+    }
   }
+};
+
+proto.use = function use(fn) {
+  var layer = new Layer("/", {}, fn);
+
+  layer.route = undefined;
+  this.stack.push(layer);
+
+  return this;
 };
 
 function matchLayer(layer, path) {
